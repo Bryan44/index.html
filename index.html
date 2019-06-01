@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="es">
+<head>
+<title>Tu Café</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/estilos.css">
+	<script src="js/jquery-1.12.3.js.enc"></script>
+	<script src="js/bootstrap.min.js"></script>
+</head>
+<body id="top" data-spy="scroll" data-target=".navbar" data-offset="60">
+	<header>
+		<nav class="navbar navbar-default navbar-fixed-top menu">
+	<div class="container">
+
+	<div class="navbar-header">
+	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span> 
+</button>
+<a class="navbar-brand" href="#inicio">
+<img src="Imagenes/logop.png" width="150px" height="40px">
+</a>
+</div>
+<div class="collapse navbar-collapse" id="myNavbar">
+<ul class="nav navbar-nav navbar-right">
+<li><a href="#acerca_de">ACERCA DE</a></li>
+<li><a href="#productos">PRODUCTOS</a></li>
+<li><a href="#equipo">EQUIPO</a></li>
+<li><a href="#contacto">CONTACTO</a></li>
+</ul>
+</div>
+	</div>
+	</nav>
+
+		<section class="jumbotron" id="inicio">
+			<em><h1>Café "El Amigo"</h1></em>
+		<p>Un lugar donde poder descansar</p>
+		<form class= "form-inline">
+			<input type="email" class= "form-control" size="50" placeholder="Direccion de correo">
+			<button type="button" class= "btn btn-success">Suscribirse</button>
+		</form>
+</section>
+	</header>
+	<!-- Sección Acerca de-->
+	<section id="acerca_de" class="container-fluid bg-grey">
+			<center><h2>Acerca de Nosotros</h2></center>
+		<div class="row">
+		<div class="col-sm-6">
+				<div class="banner">
+		</div>
+		</div>
+		<div class="col-sm-6">
+			<h4>Somos un café el cual tiene como único objtivo lograr que puedas relajarte, por ello te brindramos los mejores servicios: Café de alta calidad, un ambiente de tranquilidad y sobretodo un trato amigable hacia ti, porque para nosotros los clientes son importantes.
+			</h4>
+		</div>
+			</div>
+			</section>
+		<!-- Sección de Productos -->
+		<section id="productos" class=" container-fluid text-center">
+<div class="row">
+<center><h2>Productos</h2></center>
+	<div class="col-sm-6">
+		<h4>Brindándote el mejor de los servicios, además de la mejor calidad en cuanto a producto, esa calidad que nos caracteriza</h4>
+		<a href="Productos.html"><button type="button" class= "btn btn-success">Más información</button></a>
+	</div>
+	<div class="col-sm-6">
+		<img src="Imagenes/Footer.jpg">
+	</div>
+</div>
+			</section>
+		<!-- 	Sección Equipo de trabajo-->
+		<section id="equipo" class=" container-fluid bg-grey text-center">
+		<center><h2>Nuestro Equipo</h2></center>
+		<div class="row">
+			<div class="col-sm-6">
+				<img src="Imagenes/Personal.jpg">
+			</div>
+			<div class="col-sm-6">
+			<h4>Contamos con un personal de primer nivel, siendo calificados como uno de los mejores staff de trabajo por todos nuestros clientes, nuestros empleados están lo suficientemente capacitados para darte el servicio que te mereces.</h4>
+				<a href="Equipo.html"><button type="button" class= "btn btn-success">Más información</button></a>
+			</div>
+		</div>
+		</section>
+		<!-- Sección Contacto -->
+		<section id="contacto" class="container-fluid bg-grey">
+		<h2 class="text-center">CONTACTO</h2>
+		<h4 class="text-center">Información de contacto:</h4>
+		<div class="row">
+		<div class="col-sm-4">
+		<center><span class="glyphicon glyphicon-envelope icono"></span></center>
+		<p class="text-center"> Col. España</p>
+		</div>
+		<div class="col-sm-4">
+		<center><span class="glyphicon glyphicon-plus icono"></span></center>
+		<p class="text-center">0000-0000</p>
+		</div>
+		<div class="col-sm-4">
+		<center><span class="glyphicon glyphicon-cloud icono"></span> </center>
+		<p class="text-center">CafeElAmigo.com</p>
+		</div>
+			</div>
+		</section>
+		<!--Sección Mapas-->
+		<section class="container-fluid">
+		<h3>Nuestra Ubicación.</h3>
+		<div class="row">
+		<div class="col-sm-12">
+		<!-- Asignar alto y ancho con CSS -->
+<div id="googleMap" style="height:300px;width:90%;"></div>
+<!-- Agregar Google Maps -->
+<script src="http://maps.googleapis.com/maps/api/js"></script>
+<script>
+var myCenter = new google.maps.LatLng(13.979048, -89.566748);
+function initialize() {
+var mapProp = {
+center:myCenter,
+zoom:15,
+scrollwheel:true,
+draggable:true,
+mapTypeId:google.maps.MapTypeId.ROADMAP
+};
+var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+var marker = new google.maps.Marker({
+position:myCenter,
+});	
+marker.setMap(map);
+}
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+
+		</div>
+		</div>
+		</section>
+		<!--Pie de página-->
+		<footer class="container-fluid text-center">
+		<a href="#inicio" title="Ir al inicio">
+		<span class="glyphicon glyphicon-home"></span>
+		</a>
+		<p>Página creada por: <a href="#inicio" title="Visite nuestro sitio">CafeElAmigo.com</a></p>
+		</footer>
+		<!--Script para añadir desplazamiento suave-->
+<script>
+$(document).ready(function(){
+// Agrega desplazamiento suave a anclas en barra de navegación y pie.
+$(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+  // Removiendocomportamientopordefecto.
+event.preventDefault();
+  // Almacenando el contenedor destino.
+var hash = this.hash;
+  // Agregando desplazamiento suave.
+  // El 900 son los milisegundos para moverse.
+$('html, body').animate({
+ // Moviendo sitio a contenedor destino.
+scrollTop: $(hash).offset().top
+  }, 900, function(){
+    // Añade el ancla a la dirección.
+window.location.hash = hash;
+    });
+  });
+})
+</script>
+</body>
+</html>

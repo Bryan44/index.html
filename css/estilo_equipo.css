@@ -1,0 +1,114 @@
+@charset "utf-8";
+/* CSS Document */
+body
+{
+	margin: 0;
+	padding: 0;
+	font-family: "Popins", sans-serif;
+}
+	.split 
+	{
+		position: relative;
+		height:100vh;
+		display: flex;
+		background: #000;
+		background-repeat: no-repeat;
+	}
+	.split .screen
+	{
+		position: relative;
+		flex-grow: 2;
+		display: flex;
+		justify-content: flex-end;
+		align-items: flex-end;
+		overflow: hidden;
+		transition: 2s;
+		opacity: 0.1;
+	}
+.split:hover .screen
+{
+	opacity: 0.1;
+}
+.split .screen:hover
+{
+	flex-grow: 5;
+	opacity: 1;
+}
+	.split .screen:nth-child(1)
+	{
+	background: url(../Imagenes/Gerente.jpg);
+		background-repeat:no-repeat;
+		background-position: center;
+		background-size: cover;
+	}
+	.split .screen:nth-child(2)
+	{
+	background: url(../Imagenes/Economista.jpg);
+		background-repeat:no-repeat;
+		background-position: center;
+		background-size: cover;
+	}
+	.split .screen:nth-child(3)
+	{
+	background: url(../Imagenes/Publicista.jpg);
+		background-repeat:no-repeat;
+		background-position: center;
+		background-size: cover;
+	}
+.split .screen:nth-child(4)
+	{
+	background: url(../Imagenes/Mesera.jpg);
+		background-repeat:no-repeat;
+		background-position: center;
+		background-size: cover;
+	}
+.split .screen .content
+{
+position: absolute;
+	width: 400px;
+	height: auto;
+	background: #fff;
+	padding: 40px;
+	box-sizing: border-box;
+	transform: rotateX(100%);
+	transition: 0.5s;
+	text-align: justify;
+}
+.split .screen:hover .content
+{
+	transform: rotateX(0);
+	transition-delay: 1s;
+}
+.split .screen .content h2
+{
+	margin: 0;
+	padding: 0;
+	text-transform: uppercase;
+	font-size: 30px;
+	color: #ed363a;
+}
+.split .screen .content p
+{
+	margin: 0;
+	padding: 0;
+}
+@media screen and (min-width:320px) {
+	img {
+		max-width:100%;
+	}
+}
+@media screen and (min-width:768px) {
+	img {
+		max-width:150px;
+	}
+}
+@media screen and (min-width:980px) {
+	img {
+		max-width:225px;
+	}
+}
+@media screen and (min-width:1200px) {
+	img {
+		max-width:300px;
+	}
+}
